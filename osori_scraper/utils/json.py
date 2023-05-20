@@ -35,7 +35,7 @@ class JSONParser:
 
     @data.setter
     def data(self, data):
-        if "pytest" in sys.modules:
+        if not "pytest" in sys.modules:
             raise "data can be directly modified only on test environment"
         self._data = data
 
