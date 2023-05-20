@@ -26,3 +26,16 @@ class Song(Codable):
         """만약 id설정 안되있으면 uuid4 id로 설정"""
         if self.id is None:
             self.id = uuid.uuid4()
+        """만약 highest_note나 lowest_note가 코드 형식을 안따르면 UnexpectedFieldValue 오류"""
+        pass
+
+    @staticmethod
+    def compare_chords(chord1: str, chord2: str) -> int:
+        """chord1이 chord2보다 높은지 확인
+
+        Return:
+            -1: chord2가 chord1보다 낮을 경우
+            0: 코드가 같을 경우
+            1: chord2가 chord1보다 높을 경우
+        """
+        pass
