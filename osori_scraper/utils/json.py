@@ -48,10 +48,16 @@ class JSONParser:
         """
         self.type을 이용해서 json안에 모든 list들이 모든 field를 가지고 있는지 체크
         여기서는 sample.json파일을 참고할것
+        id는 없어도됨
 
         Errors:
           MissingFieldValue:
             만약 특정 field가 비어있으면 이 에러를 raise함
+          DuplicatedValue:
+            똑같은 값이 2개 있을때 오류
+
+        Returns:
+            만약 valid하면 True 반환
         """
         pass
 
