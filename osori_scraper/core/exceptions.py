@@ -23,3 +23,11 @@ class DuplicatedValue(Exception):
     def __init__(self, index1: int, index2: int) -> None:
         self.message = f"`{index1}`와 `{index2}`에서 중복된 값 발견"
         super().__init__(self.message)
+
+
+class UnexpectedFieldValue(Exception):
+    """주어진 값이 형식이랑 다를때"""
+
+    def __init__(self, value: str) -> None:
+        self.message = f"`{value}`가 형식이랑 다름"
+        super().__init__(self.message)
